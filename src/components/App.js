@@ -12,8 +12,9 @@ import {
 } from '../store/interactions';
 
 import Navbar from './Navbar'
-import Markets from './Markets';
-import Balance from './Balance';
+import Markets from './Markets'
+import Balance from './Balance'
+import Order from './Order'
 
 function App() {
   const dispatch = useDispatch()
@@ -46,10 +47,8 @@ function App() {
 
     // Listen to events
     subscribeToEvents(exchange, dispatch)
-
   }
 
-  
   useEffect(() => {
     loadBlockchainData()
   })
@@ -63,10 +62,10 @@ function App() {
         <section className='exchange__section--left grid'>
 
           <Markets />
--
+
           <Balance />
 
-          {/* Order */}
+          <Order />
 
         </section>
         <section className='exchange__section--right grid'>
