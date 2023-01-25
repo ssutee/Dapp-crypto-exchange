@@ -1,13 +1,6 @@
-# Sample Hardhat Project
+# Crypto Exchange Project
 
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, and a script that deploys that contract.
+This
 
-Try running some of the following tasks:
+This project is a fully functioning crypto exchange written in React.js and Solidity.  It demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, and a script that deploys that contract.
 
-```shell
-npx hardhat help
-npx hardhat test
-REPORT_GAS=true npx hardhat test
-npx hardhat node
-npx hardhat run scripts/deploy.js
-```
