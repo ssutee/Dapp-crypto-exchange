@@ -81,7 +81,7 @@ contract Exchange {
 
     function depositToken(address _token, uint256 _amount) public {
         // Transfer tokens to exchange
-        require(IERC20(_token).transferFrom(msg.sender, address(this), _amount));
+        IERC20(_token).safeTransferFrom(msg.sender, address(this), _amount);
 
         // Update user balance
         tokens[_token][msg.sender] = tokens[_token][msg.sender] + _amount;
@@ -95,7 +95,7 @@ contract Exchange {
         require(tokens[_token][msg.sender] >= _amount + lockedTokens[_token][msg.sender]);
 
         // Transfer tokens to user
-        IERC20(_token).transfer(msg.sender, _amount);
+        IERC20(_token).safeTransfer(msg.sender, _amount);
 
         // Update user balance
         tokens[_token][msg.sender] = tokens[_token][msg.sender] - _amount;
