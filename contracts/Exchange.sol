@@ -117,8 +117,10 @@ contract Exchange {
         address _tokenGive,
         uint256 _amountGive
     ) public {
+        require(_amountGet > 0 && _amountGive > 0 , "_amountGet or _amountGive < 0 ");
         // Prevent orders if tokens aren't on exchange
         require(balanceOf(_tokenGive, msg.sender) >= _amountGive);
+
 
         // Instantiate a new order
         orderCount ++;
