@@ -12,7 +12,6 @@ contract Exchange {
     uint256 public feePercent;
     mapping(address => mapping(address => uint256)) public tokens;
     mapping(uint256 => _Order) public orders;
-    mapping(uint256 => address) public owners;
     mapping(address => mapping(address => uint256)) public lockedTokens;
     uint256 public orderCount;
     mapping(uint256 => bool) public orderCancelled;
@@ -140,7 +139,6 @@ contract Exchange {
             block.timestamp
         );
 
-        owners[orderCount] = msg.sender;
         lockedTokens[_tokenGive][msg.sender] += _amountGive;
 
         // Emit event
