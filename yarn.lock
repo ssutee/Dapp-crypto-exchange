@@ -2483,6 +2483,11 @@
     "@svgr/plugin-svgo" "^5.5.0"
     loader-utils "^2.0.0"
 
+"@symblox/hardhat-abi-gen@^0.2.0":
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/@symblox/hardhat-abi-gen/-/hardhat-abi-gen-0.2.0.tgz#69ef506e548f834118b5996eddf2889c1fbe3d51"
+  integrity sha512-M1+/hxiaLLUSMCf9pPBhzZdWlS1NcxpbwdQjDTYu6taN1nRNBhtUi+sC4iHBwUU112ewXgmAVxYm3LG7PdADhQ==
+
 "@testing-library/dom@^8.5.0":
   version "8.20.0"
   resolved "https://registry.yarnpkg.com/@testing-library/dom/-/dom-8.20.0.tgz#914aa862cef0f5e89b98cc48e3445c4c921010f6"

@@ -1,7 +1,8 @@
 require("@nomicfoundation/hardhat-toolbox");
+require("@symblox/hardhat-abi-gen");
 require("dotenv").config();
 
-const privateKeys = process.env.PRIVATE_KEYS || ""
+const privateKeys = process.env.PRIVATE_KEYS || "";
 
 // This is a sample Hardhat task. To learn how to create your own go to
 // https://hardhat.org/guides/create-task.html
@@ -26,7 +27,15 @@ module.exports = {
     localhost: {},
     j2o: {
       url: `https://rpc.j2o.io`,
-      accounts: privateKeys.split(','),
+      accounts: privateKeys.split(","),
     },
+  },
+  abiExporter: {
+    path: "./abis",
+    clear: true,
+    flat: true,
+    only: [":Exchange$"],
+    spacing: 2,
+    pretty: true,
   },
 };
