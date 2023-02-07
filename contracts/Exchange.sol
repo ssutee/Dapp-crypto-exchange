@@ -57,6 +57,7 @@ contract Exchange {
         uint256 amountGet,
         address tokenGive,
         uint256 amountGive,
+        uint256 feeAmount,
         address creator,
         uint256 timestamp
     );
@@ -272,6 +273,7 @@ contract Exchange {
             _amountGet,
             _tokenGive,
             _amountGive,
+            _feeAmount,
             _user,
             block.timestamp
         );

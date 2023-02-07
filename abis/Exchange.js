@@ -185,6 +185,12 @@ export default [
       },
       {
         "indexed": false,
+        "internalType": "uint256",
+        "name": "feeAmount",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
         "internalType": "address",
         "name": "creator",
         "type": "address"
